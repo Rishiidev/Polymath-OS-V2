@@ -5,7 +5,7 @@ import { Task } from '../types';
 import { useApp } from '../context/AppContext';
 import { formatTime } from '../utils/helpers';
 import { getFallbackAction } from '../utils/taskEngine';
-import { notifyTimerComplete, scheduleTaskReminder, clearTaskReminder } from '../utils/notifications';
+import { notifyTimerComplete } from '../utils/notifications';
 import { Button } from '../components/Button';
 import { Modal } from '../components/Modal';
 import { HoldToExitButton } from '../components/HoldToExitButton';

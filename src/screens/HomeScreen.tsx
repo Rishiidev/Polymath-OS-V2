@@ -78,7 +78,7 @@ export const HomeScreen = () => {
               <Clock size={12} /> Deep Work
             </button>
           </div>
-          <p className="text-2xl font-medium leading-tight italic text-gray-200">"{insight}"</p>
+          <p className="text-2xl font-medium leading-tight italic text-[var(--text-secondary)]">"{insight}"</p>
         </section>
 
         {/* Skills Section */}
@@ -93,7 +93,7 @@ export const HomeScreen = () => {
           <div className="flex flex-wrap gap-2">
             {user.skills.length > 0 ? (
               user.skills.map(skill => (
-                <div key={skill.id} className="px-3 py-1 bg-[var(--bg-tertiary)] border border-[var(--border-secondary)] rounded-full text-xs font-bold text-gray-300">{skill.name}</div>
+                <div key={skill.id} className="px-3 py-1 bg-[var(--bg-tertiary)] border border-[var(--border-secondary)] rounded-full text-xs font-bold text-[var(--text-secondary)]">{skill.name}</div>
               ))
             ) : (
               <p className="text-xs text-[var(--text-dimmed)] italic">No skills defined. Add some to personalize actions.</p>
@@ -140,7 +140,7 @@ export const HomeScreen = () => {
         </button>
 
         {/* Bottom Controls */}
-        <div className="fixed bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black via-black to-transparent pt-12">
+        <div className="fixed bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-[var(--bg-primary)] via-[var(--bg-primary)] to-transparent pt-12">
           <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
             <Button variant="secondary" className="flex-1" onClick={handleStuck}>
               <AlertCircle size={20} /> I'm Stuck

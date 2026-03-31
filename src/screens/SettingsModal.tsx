@@ -118,7 +118,7 @@ export const SettingsModal = () => {
                 <div className="space-y-4">
                   <div className="flex items-center justify-between p-4 bg-[var(--bg-tertiary)] rounded-2xl">
                     <span className="font-bold">Strict Mode</span>
-                    <button onClick={handleStrictToggle} className={`w-12 h-6 rounded-full transition-all ${settings.strictMode ? 'bg-[var(--accent)]' : 'bg-[#333]'}`}>
+                    <button onClick={handleStrictToggle} className={`w-12 h-6 rounded-full transition-all ${settings.strictMode ? 'bg-[var(--accent)]' : 'bg-[var(--border-secondary)]'}`}>
                       <div className={`w-5 h-5 rounded-full bg-white transition-transform ${settings.strictMode ? 'translate-x-6' : 'translate-x-0.5'}`} />
                     </button>
                   </div>
@@ -151,7 +151,7 @@ export const SettingsModal = () => {
                   ] as const).map(({ key, label }) => (
                     <div key={key} className="flex items-center justify-between p-4 bg-[var(--bg-tertiary)] rounded-2xl">
                       <span className="font-bold">{label}</span>
-                      <button onClick={() => update({ [key]: !settings[key] } as any)} className={`w-12 h-6 rounded-full transition-all ${settings[key] ? 'bg-[var(--accent)]' : 'bg-[#333]'}`}>
+                      <button onClick={() => update({ [key]: !settings[key] } as any)} className={`w-12 h-6 rounded-full transition-all ${settings[key] ? 'bg-[var(--accent)]' : 'bg-[var(--border-secondary)]'}`}>
                         <div className={`w-5 h-5 rounded-full bg-white transition-transform ${settings[key] ? 'translate-x-6' : 'translate-x-0.5'}`} />
                       </button>
                     </div>
@@ -164,7 +164,7 @@ export const SettingsModal = () => {
                 <p className="text-[10px] font-mono uppercase tracking-widest text-[var(--text-muted)] mb-4">Advanced</p>
                 <div className="flex items-center justify-between p-4 bg-[var(--bg-tertiary)] rounded-2xl">
                   <span className="font-bold">Hardcore Mode</span>
-                  <button onClick={handleHardcoreToggle} className={`w-12 h-6 rounded-full transition-all ${settings.hardcoreMode ? 'bg-red-500' : 'bg-[#333]'}`}>
+                  <button onClick={handleHardcoreToggle} className={`w-12 h-6 rounded-full transition-all ${settings.hardcoreMode ? 'bg-red-500' : 'bg-[var(--border-secondary)]'}`}>
                     <div className={`w-5 h-5 rounded-full bg-white transition-transform ${settings.hardcoreMode ? 'translate-x-6' : 'translate-x-0.5'}`} />
                   </button>
                 </div>
