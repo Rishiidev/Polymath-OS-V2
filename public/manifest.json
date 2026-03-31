@@ -1,0 +1,25 @@
+{
+  "name": "Polymath OS",
+  "short_name": "Polymath",
+  "description": "A system that forces execution when you feel stuck. Build discipline, courage, and consistency through micro-actions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#D4FF00",
+  "orientation": "portrait",
+  "categories": ["productivity", "lifestyle"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
