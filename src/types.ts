@@ -1,4 +1,3 @@
-
 export type Blocker = 'procrastination' | 'overthinking' | 'inconsistency';
 
 export interface UserTraits {
@@ -22,9 +21,11 @@ export interface User {
   traits: UserTraits;
   onboarded: boolean;
   skills: Skill[];
-  adaptationFactor: number; // 0.5 to 2.0, affects task duration/complexity
+  adaptationFactor: number;
+  lastTaskDate?: string; // "YYYY-MM-DD" — for daily rotation
 }
 
+// FIX BUG #9: Removed name, skills, goal, blocker from Settings (they belong on User)
 export interface Settings {
   focusDuration: 15 | 25 | 45;
   strictMode: boolean;
@@ -34,13 +35,9 @@ export interface Settings {
   timerCompletion: boolean;
   reEngagement: boolean;
   aggressiveNudges: boolean;
-  name: string;
-  skills: string[];
   hardcoreMode: boolean;
   theme: 'dark' | 'light';
   accentColor: 'green' | 'blue' | 'orange' | 'purple';
-  goal: string;
-  blocker: string;
 }
 
 export interface Task {
@@ -74,4 +71,12 @@ export interface ActionEvent {
   timestamp: number;
   duration?: number;
   metadata?: any;
+}
+
+export type ViewType = 'home' | 'traits' | 'skills' | 'focus_setup' | 'focus_session' | 'history';
+
+export interface FeedbackData {
+  trait: keyof UserTraits;
+  value: number;
+  text: string;
 }
